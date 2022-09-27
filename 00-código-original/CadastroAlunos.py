@@ -1,12 +1,11 @@
-listaAlunos = list()
+listaAlunos = []
 adicionar = ' '
-notas = list()
+notas = []
 conceito = ''
 
 while True:
-    alunos = dict()
+    alunos = {'Nome': str(input('Nome e Sobrenome: ')).strip()}
 
-    alunos['Nome'] = str(input('Nome e Sobrenome: ')).strip()
     try:
         dados = float(input('Primeira nota: '))
     except ValueError:
@@ -51,12 +50,11 @@ while True:
             adicionar = input('Quer adicionar outro aluno? [S/N] ').upper()
 
 
-        if adicionar == 'S':
-            notas.clear()
-            continue
-        elif adicionar == 'N':
+        if adicionar == 'N':
             break
 
 
 
+        elif adicionar == 'S':
+            notas.clear()
 print(listaAlunos)

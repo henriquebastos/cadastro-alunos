@@ -19,13 +19,11 @@ def avg(*notas):
 
 def conceito(media):
     if media <= 5:
-        valor = Conceito.RUIM
+        return Conceito.RUIM
     elif media < 8:
-        valor = Conceito.BOM
+        return Conceito.BOM
     else:
-        valor = Conceito.EXCELENTE
-
-    return valor
+        return Conceito.EXCELENTE
 
 
 def main():
